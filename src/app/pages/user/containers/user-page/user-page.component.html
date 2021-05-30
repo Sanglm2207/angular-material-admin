@@ -1,0 +1,25 @@
+<app-layout>
+  <mat-card-content class="user-content">
+    <div class="user-content__wrapper">
+      <mat-card class="user-content__item-wrapper">
+        <mat-card-title>
+          Float label:
+          <mat-form-field appearance="fill">
+            <mat-select [(value)]="theValueOfTheSelect">
+              <mat-option value="one">First option</mat-option>
+              <mat-option value="two">Second option</mat-option>
+              <mat-option value="three">Second option</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card-title>
+        <div class="user-content__headings">
+          <app-nmap-a *ngIf="theValueOfTheSelect === 'one'"></app-nmap-a>
+          <app-nmap-b *ngIf="theValueOfTheSelect === 'two'"></app-nmap-b>
+          <app-nmap-c *ngIf="theValueOfTheSelect === 'three'"></app-nmap-c>
+        </div>
+      </mat-card>
+    </div>
+  </mat-card-content>
+
+  <app-footer></app-footer>
+</app-layout>

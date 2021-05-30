@@ -1,5 +1,6 @@
 export enum routes {
   DASHBOARD = '/dashboard',
+  USER = '/user',
   TYPOGRAPHY = '/typography',
   TABLES = '/tables',
   NOTIFICATION = '/notification',

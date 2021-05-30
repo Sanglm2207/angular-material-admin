@@ -12,6 +12,12 @@ const routes: Routes = [
     component: DashboardPageComponent
   },
   {
+    path: 'user',
+    pathMatch: 'full',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./pages/user/user.module').then(m => m.UserModule)
+  },
+  {
     path: 'typography',
     pathMatch: 'full',
     canActivate: [AuthGuard],

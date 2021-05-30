@@ -8,6 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { HeaderModule } from './header/header.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -15,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SettingsMenuComponent } from './ui-elements/settings-menu/settings-menu.component';
 import { DateMenuComponent } from './ui-elements/date-menu/date-menu.component';
 import { LayoutComponent } from './layout/layout.component';
+import { MatInputModule } from "@angular/material/input";
 
 
 @NgModule({
@@ -35,7 +37,10 @@ import { LayoutComponent } from './layout/layout.component';
     MatMenuModule,
     MatSelectModule,
     FormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   exports: [
     HeaderModule,
@@ -43,7 +48,11 @@ import { LayoutComponent } from './layout/layout.component';
     FooterComponent,
     SettingsMenuComponent,
     DateMenuComponent,
-    LayoutComponent
+    LayoutComponent,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatButtonModule
   ]
 })
 export class SharedModule { }
